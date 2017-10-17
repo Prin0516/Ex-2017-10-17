@@ -7,7 +7,6 @@ public class LoginFrame extends JFrame {
     private JLabel jlbID=new JLabel("ID:");
     private JLabel jlbPW=new JLabel("Password:");
     private JTextField jtfID=new JTextField();
-//    private JTextField jtfPW=new JTextField();
     private JPasswordField jpf=new JPasswordField();
     private JButton jbtnlogin=new JButton("Login");
     private JButton jbtneixt=new JButton("Exit");
@@ -43,10 +42,9 @@ public class LoginFrame extends JFrame {
         jbtnlogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(jtfID.equals("h103")&&new String(jpf.getPassword()).equals("23323456")){
+                if(jtfID.getText().equals("h103")&&new String(jpf.getPassword()).equals("23323456")){
                     MainFrame mf=new MainFrame();
                     mf.setVisible(true);
-
                 }else{
                     JOptionPane.showMessageDialog(LoginFrame.this,"Error");
                 }
