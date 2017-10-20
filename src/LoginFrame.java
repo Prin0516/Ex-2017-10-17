@@ -6,8 +6,8 @@ import java.awt.event.ActionListener;
 public class LoginFrame extends JFrame {
     private JLabel jlbID=new JLabel("ID:");
     private JLabel jlbPW=new JLabel("Password:");
-    private JTextField jtfID=new JTextField("h103");
-    private JPasswordField jpf=new JPasswordField("23323456");
+    private JTextField jtfID=new JTextField();
+    private JPasswordField jpf=new JPasswordField();
     private JButton jbtnlogin=new JButton("Login");
     private JButton jbtneixt=new JButton("Exit");
     private Container cp;
@@ -40,18 +40,14 @@ public class LoginFrame extends JFrame {
         jbtnlogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(jtfID.getText().equals("h103")&&new String(jpf.getPassword()).equals("23323456")){
+                if(jtfID.getText().equals("h304")&&new String(jpf.getPassword()).equals("23323456")){
                     MainFrame mf=new MainFrame(LoginFrame.this);
                     LoginFrame.this.setVisible(false);
                     mf.setVisible(true);
-
                 }else{
                     JOptionPane.showMessageDialog(LoginFrame.this,"Error");
                 }
             }
         });
-
-
-
     }
 }

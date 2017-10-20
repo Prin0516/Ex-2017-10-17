@@ -11,12 +11,14 @@ public class MainFrame extends JFrame {
     private JButton jbtn[]=new JButton[9];
     private JPanel jpl=new JPanel(new GridLayout(3,3));
     private LoginFrame login;
+    private Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+    private int width = 300, height = 300, Swidth = dim.width, Sheight = dim.height;
     public MainFrame(LoginFrame log){
         login=log;
         init();
     }
     private void init(){
-        this.setBounds(50,50,500,500);
+        this.setBounds(Swidth / 2 - width / 2, Sheight / 2 - height / 2, 300, 300);
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
